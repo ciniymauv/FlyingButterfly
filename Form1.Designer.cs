@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
+            buttoncreate = new Button();
             SuspendLayout();
             // 
-            // button1
+            // buttoncreate
             // 
-            button1.Location = new Point(12, 416);
-            button1.Name = "button1";
-            button1.Size = new Size(81, 22);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            buttoncreate.Location = new Point(12, 416);
+            buttoncreate.Name = "buttoncreate";
+            buttoncreate.Size = new Size(81, 22);
+            buttoncreate.TabIndex = 0;
+            buttoncreate.Text = "Создать";
+            buttoncreate.UseVisualStyleBackColor = true;
+            buttoncreate.Click += button1_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            ClientSize = new Size(729, 450);
+            Controls.Add(buttoncreate);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -53,6 +54,6 @@
 
         #endregion
 
-        private Button button1;
+        private Button buttoncreate;
     }
 }
