@@ -127,7 +127,7 @@ public class Drawingbutterfly
         g.FillEllipse(black, _startposX.Value + 37, _startposY.Value + 25, 10, 20);
         g.FillEllipse(black, _startposX.Value + 36, _startposY.Value + 43, 12, 30);
 
-        //aнтенны
+        //Aнтенны
         if (Entitybutterfly.Antennae)
         {
             g.DrawLine(pen, _startposX.Value + 33, _startposY.Value - 10, _startposX.Value + 40, _startposY.Value + 25);
