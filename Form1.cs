@@ -12,19 +12,6 @@ public partial class Form1 : Form
         InitializeComponent();
     }
 
-    private void Draw()
-    {
-        if (_drawingbutterfly == null)
-        {
-            return;
-        }
-
-        Bitmap bmp = new(pictureBox.Width, pictureBox.Height);
-        Graphics gr = Graphics.FromImage(bmp);
-        _drawingbutterfly.DrawButterfly(g);
-        pictureBox.Image = bmp;
-    }
-
     private void CreateObject(string type)
     {
         Random random = new();
@@ -36,12 +23,19 @@ public partial class Form1 : Form
                     Convert.ToBoolean(random.Next(0, 2)), Convert.ToBoolean(random.Next(0, 2)),
                     Convert.ToBoolean(random.Next(0, 2)));
                 break;
+
+            case nameof(Drawingsimplebutterfly):
+
+                break;
             default:
                 return;
         }
         _drawingbutterfly.SetPictureSize(pictureBox.Width, pictureBox.Height);
         _drawingbutterfly.SetPosition(random.Next(10, 100), random.Next(10, 100));
-        Draw();
+        Bitmap bmp = new(pictureBox.Width, pictureBox.Height);
+        Graphics g = Graphics.FromImage(bmp);
+        _drawingbutterfly.DrawButterfly(g);
+        pictureBox.Image = bmp;
     }
 
     private void buttoncreate_Click(object sender, EventArgs e) => CreateObject(nameof(Drawingbutterfly));
