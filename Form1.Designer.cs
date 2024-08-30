@@ -54,6 +54,7 @@
             buttoncreate.TabIndex = 5;
             buttoncreate.Text = "Создать";
             buttoncreate.UseVisualStyleBackColor = true;
+            buttoncreate.Click += buttoncreate_Click;
             // 
             // buttonright
             // 
@@ -64,6 +65,7 @@
             buttonright.Size = new Size(50, 50);
             buttonright.TabIndex = 6;
             buttonright.UseVisualStyleBackColor = true;
+            buttonright.Click += buttonmove_Click;
             // 
             // buttondown
             // 
@@ -74,6 +76,7 @@
             buttondown.Size = new Size(50, 50);
             buttondown.TabIndex = 7;
             buttondown.UseVisualStyleBackColor = true;
+            buttondown.Click += buttonmove_Click;
             // 
             // buttonleft
             // 
@@ -84,6 +87,7 @@
             buttonleft.Size = new Size(50, 50);
             buttonleft.TabIndex = 8;
             buttonleft.UseVisualStyleBackColor = true;
+            buttonleft.Click += buttonmove_Click;
             // 
             // buttonup
             // 
@@ -94,6 +98,7 @@
             buttonup.Size = new Size(50, 50);
             buttonup.TabIndex = 9;
             buttonup.UseVisualStyleBackColor = true;
+            buttonup.Click += buttonmove_Click;
             // 
             // Form1
             // 
