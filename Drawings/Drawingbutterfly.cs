@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FlyingButterfly;
+﻿using FlyingButterfly.Entities;
+namespace FlyingButterfly.Drawings;
 
 public class Drawingbutterfly
 {

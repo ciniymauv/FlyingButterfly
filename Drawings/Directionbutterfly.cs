@@ -1,4 +1,4 @@
-﻿namespace FlyingButterfly
+﻿namespace FlyingButterfly.Drawings
 {
     public enum Directionbutterfly
     {
