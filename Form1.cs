@@ -5,29 +5,47 @@ namespace FlyingButterfly;
 public partial class Form1 : Form
 {
     private Drawingbutterfly? _drawingbutterfly;
+    private Graphics g;
 
     public Form1()
     {
         InitializeComponent();
     }
 
-    private void buttoncreate_Click(object sender, EventArgs e)
+    private void Draw()
     {
-        Random random = new();
-        _drawingbutterfly = new Drawingbutterfly();
-        _drawingbutterfly.Init(random.Next(100, 300), random.Next(1200, 3600),
-            Color.FromArgb(random.Next(0, 128), random.Next(0, 128), random.Next(0, 128)),
-            Color.FromArgb(random.Next(127, 256), random.Next(127, 256), random.Next(127, 256)),
-            Convert.ToBoolean(random.Next(0, 2)), Convert.ToBoolean(random.Next(0, 2)), Convert.ToBoolean(random.Next(0, 2)));
-        _drawingbutterfly.SetPictureSize(pictureBox.Width, pictureBox.Height);
-        _drawingbutterfly.SetPosition(random.Next(10, 100), random.Next(10, 100));
+        if (_drawingbutterfly == null)
+        {
+            return;
+        }
 
         Bitmap bmp = new(pictureBox.Width, pictureBox.Height);
-        Graphics g = Graphics.FromImage(bmp);
+        Graphics gr = Graphics.FromImage(bmp);
         _drawingbutterfly.DrawButterfly(g);
         pictureBox.Image = bmp;
     }
 
+    private void CreateObject(string type)
+    {
+        Random random = new();
+        switch (type)
+        {
+            case nameof(Drawingbutterfly):
+                _drawingbutterfly = new Drawingbutterfly(random.Next(100, 300), random.Next(1200, 3600), Color.FromArgb(random.Next(0, 128), random.Next(0, 128), random.Next(0, 128)),
+                    Color.FromArgb(random.Next(127, 256), random.Next(127, 256), random.Next(127, 256)),
+                    Convert.ToBoolean(random.Next(0, 2)), Convert.ToBoolean(random.Next(0, 2)),
+                    Convert.ToBoolean(random.Next(0, 2)));
+                break;
+            default:
+                return;
+        }
+        _drawingbutterfly.SetPictureSize(pictureBox.Width, pictureBox.Height);
+        _drawingbutterfly.SetPosition(random.Next(10, 100), random.Next(10, 100));
+        Draw();
+    }
+
+    private void buttoncreate_Click(object sender, EventArgs e) => CreateObject(nameof(Drawingbutterfly));
+  
     private void buttonmove_Click(object sender, EventArgs e)
     {
         if (_drawingbutterfly == null)

@@ -1,4 +1,5 @@
 ﻿using FlyingButterfly.Entities;
+
 namespace FlyingButterfly.Drawings;
 
 public class Drawingbutterfly
@@ -10,6 +11,14 @@ public class Drawingbutterfly
     private int? _startposY;
     private readonly int _drawbutterflywidth = 100;
     private readonly int _drawbutterflyheight = 100;
+
+    public Drawingbutterfly(int v1, int v2, Color color1, Color color2, bool v3, bool v4, bool v5)
+    {
+    }
+
+    public Drawingbutterfly()
+    {
+    }
 
     public void Init(int speed, double weight, Color mainColor, Color secondaryColor, bool pattern, bool antennae, bool v)
     {
@@ -128,5 +137,10 @@ public class Drawingbutterfly
             g.DrawLine(pen, _startposX.Value + 33, _startposY.Value - 10, _startposX.Value + 40, _startposY.Value + 25);
             g.DrawLine(pen, _startposX.Value + 52, _startposY.Value - 10, _startposX.Value + 45, _startposY.Value + 25);
         }
+    }
+
+    internal void DrawButterfly(object g)
+    {
+        throw new NotImplementedException();
     }
 }

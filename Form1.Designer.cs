@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             pictureBox = new PictureBox();
-            buttoncreate = new Button();
             buttonright = new Button();
             buttondown = new Button();
             buttonleft = new Button();
             buttonup = new Button();
+            buttoncreate = new Button();
             buttoncreatesimple = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
             SuspendLayout();
@@ -46,16 +46,6 @@
             pictureBox.Size = new Size(733, 449);
             pictureBox.TabIndex = 4;
             pictureBox.TabStop = false;
-            // 
-            // buttoncreate
-            // 
-            buttoncreate.Location = new Point(12, 415);
-            buttoncreate.Name = "buttoncreate";
-            buttoncreate.Size = new Size(75, 23);
-            buttoncreate.TabIndex = 5;
-            buttoncreate.Text = "Создать бабочку";
-            buttoncreate.UseVisualStyleBackColor = true;
-            buttoncreate.Click += buttoncreate_Click;
             // 
             // buttonright
             // 
@@ -101,13 +91,23 @@
             buttonup.UseVisualStyleBackColor = true;
             buttonup.Click += buttonmove_Click;
             // 
+            // buttoncreate
+            // 
+            buttoncreate.Location = new Point(12, 415);
+            buttoncreate.Name = "buttoncreate";
+            buttoncreate.Size = new Size(114, 23);
+            buttoncreate.TabIndex = 10;
+            buttoncreate.Text = "Создать бабочку";
+            buttoncreate.UseVisualStyleBackColor = true;
+            buttoncreate.Click += buttoncreate_Click;
+            // 
             // buttoncreatesimple
             // 
-            buttoncreatesimple.Location = new Point(150, 415);
+            buttoncreatesimple.Location = new Point(132, 415);
             buttoncreatesimple.Name = "buttoncreatesimple";
-            buttoncreatesimple.Size = new Size(75, 23);
-            buttoncreatesimple.TabIndex = 10;
-            buttoncreatesimple.Text = "Создать ghjc";
+            buttoncreatesimple.Size = new Size(165, 23);
+            buttoncreatesimple.TabIndex = 11;
+            buttoncreatesimple.Text = "Создать простую бабочку";
             buttoncreatesimple.UseVisualStyleBackColor = true;
             // 
             // Form1
@@ -116,11 +116,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(729, 450);
             Controls.Add(buttoncreatesimple);
+            Controls.Add(buttoncreate);
             Controls.Add(buttonup);
             Controls.Add(buttonleft);
             Controls.Add(buttondown);
             Controls.Add(buttonright);
-            Controls.Add(buttoncreate);
             Controls.Add(pictureBox);
             Name = "Form1";
             Text = "Бабочка";
@@ -131,11 +131,11 @@
         #endregion
 
         private PictureBox pictureBox;
-        private Button buttoncreate;
         private Button buttonright;
         private Button buttondown;
         private Button buttonleft;
         private Button buttonup;
+        private Button buttoncreate;
         private Button buttoncreatesimple;
     }
 }
